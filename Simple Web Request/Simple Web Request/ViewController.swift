@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     
     func simpleGetUrlRequest()
     {
-        let url = URL(string: "http://www.stackoverflow.com")!
+        let url = URL(string: "https://httpbin.org/get")!
 
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
             guard let data = data else { return }
@@ -68,7 +68,7 @@ class ViewController: UIViewController {
     func simpleGetUrlRequestWithErrorHandling()
     {
         let session = URLSession.shared
-        let url = URL(string: "https://learnappmaking.com/ex/users.json")!
+        let url = URL(string: "https://httpbin.org/get")!
         
         let task = session.dataTask(with: url) { data, response, error in
             
